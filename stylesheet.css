@@ -1,0 +1,56 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: darkgrey;
+    justify-content: center;
+}
+
+
+main{
+    display: grid;
+    grid-template-areas:
+        "header"
+        "pic"
+        "intro"
+        "process"
+        "pic"
+        "footer";
+    grid-auto-rows: 20vh;
+}
+
+@media(min-width: 900px){
+
+
+    main{
+        display: grid;
+        grid-template-areas:    "header header header"
+                                "intro intro img"
+                                "img process process"
+                                "footer footer footer";
+        grid-template-rows: 10vw 40vw 40vw 10vw;
+    }
+}
+header{
+    grid-area: header;
+    background-color: green;
+}
+
+#intro{
+    grid-area: intro;
+    background-color: violet;
+}
+#image1{
+    grid-area: img;
+    object-fit: contain;
+    max-height: 100%;
+}
+
+#process{
+    grid-area: process;
+    background-color: blueviolet;
+}
+footer{
+    grid-area: footer;
+    background-color: chartreuse;
+}
